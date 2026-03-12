@@ -1,3 +1,5 @@
+@import url(global.css);
+@import url(navbar.css);
 .main-content {
     flex: 1;
     background-color: #f8fafc;
