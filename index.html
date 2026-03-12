@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduStock - Visão Geral do Inventário</title>
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <div class="logo-container">
+                <div class="logo-icon">
+                    <img src="Assets/1-617.svg" alt="EduStock Logo">
+                </div>
+                <span class="logo-text">EduStock</span>
+            </div>
+            
+            <nav class="nav-links">
+                <a href="#" class="nav-item active">
+                    <img src="Assets/1-623.svg" alt="Painel Icon">
+                    <span>Painel</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="Assets/1-627.svg" alt="Inventário Icon">
+                    <span>Inventário</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="Assets/1-631.svg" alt="Relatórios Icon">
+                    <span>Relatórios</span>
+                </a>
+                <a href="#" class="nav-item">
+                    <img src="Assets/1-635.svg" alt="Configurações Icon">
+                    <span>Configurações</span>
+                </a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <div class="support-card">
+                    <div class="support-title">Suporte</div>
+                    <a href="#" class="support-link">
+                        <img src="Assets/1-643.svg" alt="Help Icon">
+                        <span>Central de Ajuda</span>
+                    </a>
+                </div>
+            </div>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Top Navigation -->
+            <header class="top-nav">
+                <button class="mobile-menu-btn" id="menuBtn" style="display: none;">
+                    <img src="Assets/1-623.svg" alt="Menu" style="width: 24px; height: 24px;">
+                </button>
+                <div class="search-container">
+                    <img src="Assets/1-653.svg" alt="Search Icon" class="search-icon">
+                    <input type="text" class="search-input" placeholder="Pesquisar inventário...">
+                </div>
+                
+                <div class="user-actions">
+                    <button class="notification-btn">
+                        <img src="Assets/1-657.svg" alt="Notification Icon">
+                    </button>
+                    <div class="divider"></div>
+                    <div class="user-profile">
+                        <div class="user-info">
+                            <div class="user-name">Administrador</div>
+                            <div class="user-role">Academia Santa Maria</div>
+                        </div>
+                        <img src="Assets/1-667.webp" alt="User Avatar" class="avatar">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Page Content -->
+            <div class="page-content">
+                <!-- Hero Section -->
+                <section class="hero-section">
+                    <div class="hero-text">
+                        <h1 class="hero-title">Visão Geral do Inventário</h1>
+                        <p class="hero-subtitle">Acompanhe e gerencie os ativos físicos do campus em todos os departamentos.</p>
+                    </div>
+                    <button class="btn-primary">
+                        <img src="Assets/1-679.svg" alt="Add Icon">
+                        Adicionar Novo Item
+                    </button>
+                </section>
+
+                <!-- Stats Grid -->
+                <section class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon-wrapper gray">
+                                <img src="Assets/1-686.svg" alt="Total Ativos Icon">
+                            </div>
+                            <div class="badge badge-success">
+                                <img src="Assets/1-689.svg" alt="Up Icon">
+                                +12%
+                            </div>
+                        </div>
+                        <div class="stat-body">
+                            <div class="stat-label">Total de Ativos</div>
+                            <div class="stat-value">2,840</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card">
+                        <div class="stat-header">
+                            <div class="stat-icon-wrapper blue">
+                                <img src="Assets/1-699.svg" alt="Itens Uso Icon">
+                            </div>
+                            <div class="badge badge-info">
+                                Semestre Atual
+                            </div>
+                        </div>
+                        <div class="stat-body">
+                            <div class="stat-label">Itens em Uso</div>
+                            <div class="stat-value">2,156</div>
+                        </div>
+                    </div>
+
+                    <div class="stat-card" style="border-left: 4px solid var(--primary-color);">
+                        <div class="stat-header">
+                            <div class="stat-icon-wrapper red">
+                                <img src="Assets/1-710.svg" alt="Reparo Icon">
+                            </div>
+                            <div class="badge badge-danger">
+                                <img src="Assets/1-713.svg" alt="Alert Icon">
+                                Alta Prioridade
+                            </div>
+                        </div>
+                        <div class="stat-body">
+                            <div class="stat-label">Necessita Reparo</div>
+                            <div class="stat-value">42</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Table Section -->
+                <section class="table-section">
+                    <div class="table-header">
+                        <div class="table-title-group">
+                            <h2 class="table-title">Lista de Ativos</h2>
+                            <div class="filter-tabs">
+                                <button class="tab active">Todos</button>
+                                <button class="tab">Mobiliário</button>
+                                <button class="tab">Tecnologia</button>
+                            </div>
+                        </div>
+                        <div class="table-actions">
+                            <button class="btn-outline">
+                                <img src="Assets/1-734.svg" alt="Filter Icon">
+                                Filtrar
+                            </button>
+                            <button class="btn-outline">
+                                <img src="Assets/1-738.svg" alt="Export Icon">
+                                Exportar
+                            </button>
+                        </div>
+                    </div>
+
+                    <div class="table-wrapper">
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nome do Item</th>
+                                    <th>Categoria</th>
+                                    <th>Quantidade</th>
+                                    <th>Status</th>
+                                    <th style="text-align: right;">Ações</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>
+                                        <div class="item-cell">
+                                            <div class="item-icon">
+                                                <img src="Assets/1-756.svg" alt="Chair Icon">
+                                            </div>
+                                            <div class="item-info">
+                                                <div class="item-name">Ergonomic Chair</div>
+                                                <div class="item-id">ID: FUR-001-2024</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td>Mobiliário</td>
+                                    <td>124</td>
+                                    <td>
+                                        <span class="status-badge">Disponível</span>
+                                    </td>
+                                    <td style="text-align: right;">
+                                        <button class="action-btn">
+                                            <img src="Assets/1-772.svg" alt="More Icon">
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="pagination">
+                        <div class="pagination-info">Mostrando 1 a 4 de 2.840 resultados</div>
+                        <div class="pagination-btns">
+                            <button class="btn-page disabled">Anterior</button>
+                            <button class="btn-page">Próximo</button>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
