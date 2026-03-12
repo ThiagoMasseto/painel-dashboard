@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EduStock - Visão Geral do Inventário</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="global.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container-fluid">
-        <!-- Sidebar -->
+        <!-- Sidebar (Desktop) -->
         <aside class="sidebar">
             <div class="logo-container">
                 <div class="logo-icon">
@@ -51,17 +53,17 @@
         <main class="main-content">
             <!-- Top Navigation -->
             <header class="top-nav">
-                <button class="mobile-menu-btn" id="menuBtn" style="display: none;">
-                    <img src="Assets/1-623.svg" alt="Menu" style="width: 24px; height: 24px;">
+                <button class="mobile-menu-btn" id="menuBtn">
+                    <img src="Assets/1-400.svg" alt="Menu">
                 </button>
                 <div class="search-container">
-                    <img src="Assets/1-653.svg" alt="Search Icon" class="search-icon">
-                    <input type="text" class="search-input" placeholder="Pesquisar inventário...">
+                    <img src="Assets/1-407.svg" alt="Search Icon" class="search-icon">
+                    <input type="text" class="search-input" id="searchInput" placeholder="Pesquisar inventário...">
                 </div>
                 
                 <div class="user-actions">
                     <button class="notification-btn">
-                        <img src="Assets/1-657.svg" alt="Notification Icon">
+                        <img src="Assets/1-411.svg" alt="Notification Icon">
                     </button>
                     <div class="divider"></div>
                     <div class="user-profile">
@@ -69,7 +71,7 @@
                             <div class="user-name">Administrador</div>
                             <div class="user-role">Academia Santa Maria</div>
                         </div>
-                        <img src="Assets/1-667.webp" alt="User Avatar" class="avatar">
+                        <img src="Assets/1-416.webp" alt="User Avatar" class="avatar">
                     </div>
                 </div>
             </header>
@@ -82,7 +84,7 @@
                         <h1 class="hero-title">Visão Geral do Inventário</h1>
                         <p class="hero-subtitle">Acompanhe e gerencie os ativos físicos do campus em todos os departamentos.</p>
                     </div>
-                    <button class="btn-primary">
+                    <button class="btn-primary desktop-only">
                         <img src="Assets/1-679.svg" alt="Add Icon">
                         Adicionar Novo Item
                     </button>
@@ -93,10 +95,10 @@
                     <div class="stat-card">
                         <div class="stat-header">
                             <div class="stat-icon-wrapper gray">
-                                <img src="Assets/1-686.svg" alt="Total Ativos Icon">
+                                <img src="Assets/1-363.svg" alt="Total Ativos Icon">
                             </div>
                             <div class="badge badge-success">
-                                <img src="Assets/1-689.svg" alt="Up Icon">
+                                <img src="Assets/1-366.svg" alt="Up Icon">
                                 +12%
                             </div>
                         </div>
@@ -109,7 +111,7 @@
                     <div class="stat-card">
                         <div class="stat-header">
                             <div class="stat-icon-wrapper blue">
-                                <img src="Assets/1-699.svg" alt="Itens Uso Icon">
+                                <img src="Assets/1-376.svg" alt="Itens Uso Icon">
                             </div>
                             <div class="badge badge-info">
                                 Semestre Atual
@@ -121,13 +123,13 @@
                         </div>
                     </div>
 
-                    <div class="stat-card" style="border-left: 4px solid var(--primary-color);">
+                    <div class="stat-card stat-card-priority">
                         <div class="stat-header">
                             <div class="stat-icon-wrapper red">
-                                <img src="Assets/1-710.svg" alt="Reparo Icon">
+                                <img src="Assets/1-387.svg" alt="Reparo Icon">
                             </div>
                             <div class="badge badge-danger">
-                                <img src="Assets/1-713.svg" alt="Alert Icon">
+                                <img src="Assets/1-390.svg" alt="Alert Icon">
                                 Alta Prioridade
                             </div>
                         </div>
@@ -138,8 +140,8 @@
                     </div>
                 </section>
 
-                <!-- Table Section -->
-                <section class="table-section">
+                <!-- Table Section (Desktop Only) -->
+                <section class="table-section desktop-only">
                     <div class="table-header">
                         <div class="table-title-group">
                             <h2 class="table-title">Lista de Ativos</h2>
@@ -209,7 +211,45 @@
                     </div>
                 </section>
             </div>
+
+            <!-- Floating Action Button (Tablet/Mobile) -->
+            <button class="fab">
+                <img src="Assets/1-441.svg" alt="Add Icon">
+            </button>
+
+            <!-- Bottom Nav (Tablet/Mobile) -->
+            <nav class="bottom-nav">
+                <a href="#" class="bottom-nav-item active">
+                    <img src="Assets/1-420.svg" alt="Painel">
+                    <span>Painel</span>
+                </a>
+                <a href="#" class="bottom-nav-item">
+                    <img src="Assets/1-425.svg" alt="Inventário">
+                    <span>Inventário</span>
+                </a>
+                <a href="#" class="bottom-nav-item">
+                    <img src="Assets/1-430.svg" alt="Relatórios">
+                    <span>Relatórios</span>
+                </a>
+                <a href="#" class="bottom-nav-item">
+                    <img src="Assets/1-435.svg" alt="Config">
+                    <span>Config.</span>
+                </a>
+            </nav>
         </main>
     </div>
+
+    <script>
+        function updatePlaceholder() {
+            const input = document.getElementById('searchInput');
+            if (window.innerWidth <= 1024) {
+                input.placeholder = "Pesquisar...";
+            } else {
+                input.placeholder = "Pesquisar inventário...";
+            }
+        }
+        window.addEventListener('resize', updatePlaceholder);
+        window.addEventListener('load', updatePlaceholder);
+    </script>
 </body>
 </html>
